@@ -1,0 +1,88 @@
+.dropdown-item {
+  padding: 13px !important;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.bottom {
+  padding-bottom: 8px;
+  border-bottom: 2px solid grey;
+}
+
+.nav {
+  border-bottom: 1px solid grey;
+}
+
+.nav-link {
+  padding: 10px 40px !important;
+}
+
+.nav-item:hover {
+  border-bottom: 2px solid #3c4252;
+}
+
+.nav-tabs {
+  border-bottom: 2px solid #d7d7d7;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #3c4252 !important;
+}
+
+.card {
+  min-height: 400px;
+  max-height: 600px;
+  position: relative;
+  border: 2px solid red;
+}
+
+.col-blue {
+  color: #0aabf4;
+  font-weight: 400;
+  margin: 1px;
+  font-size: 90px;
+}
+
+.col-red {
+  color: #f44336;
+  font-weight: 400;
+  margin: 1px;
+  font-size: 90px;
+}
+
+.col-orange {
+  color: #ff9801;
+  font-weight: 400;
+  margin: 1px;
+  font-size: 90px;
+}
+
+.col-grey {
+  color: #607d8b;
+  font-weight: 400;
+  margin: 1px;
+  font-size: 60px;
+}
+
+.text-small {
+  font-size: 14px;
+  display: inline;
+}
+
+.right-sidebar {
+  width: 100px;
+  height: 100vh;
+  background-color: red;
+}
+
+.sidebar {
+  width: 100px;
+  height: 100vh;
+  background-color: red;
+}
+
+.siderbar .active {
+  width: 200px !important;
+}
