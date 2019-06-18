@@ -13,8 +13,7 @@
     integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="fontawesome-free-5.9.0-web/css/all.css">
   <!-- Our Custom CSS -->
-  <link rel="stylesheet" href="style4.css">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="sass.css">
 
   <!-- Font Awesome JS -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
@@ -99,7 +98,7 @@
         </li>
         <li>
           <a href="#">
-            <i class="fas fa-question"></i>
+            <i class="fas fa-badge-check"></i>
             <span class="text">FAQ</span>
           </a>
         </li>
@@ -321,7 +320,7 @@
         </div>
     </div>
     <nav id="sidebar-right" class="d-none d-md-block">
-      <div class="sidebar-header">
+      <div class="sidebar-header" id="done"  onclick="classAdd1()">
           <span style="font-size: 3em;">
               <i class="fas fa-comment-dots"></i>
             </span>
@@ -333,27 +332,27 @@
       <ul class="list-unstyled">
         <li class="active">
          <a href="">
-            <img src="avatar.jpg" class="rounded-circle" width="40" height="40" alt=""> Abid Saleem
+            <img src="avatar.jpg" class="rounded-circle" width="40" height="40" alt=""> <span class="side-text">Abid Saleem</span> 
          </a>
         </li>
         <li>
             <a href="">
-                <img src="avatar.jpg" class="rounded-circle" width="40" height="40" alt=""> Abid Saleem
+                <img src="avatar.jpg" class="rounded-circle" width="40" height="40" alt=""> <span class="side-text">Abid Saleem</span> 
              </a>
         </li>
         <li> 
             <a href="">
-                <img src="avatar.jpg" class="rounded-circle" width="40" height="40" alt=""> Abid Saleem
+                <img src="avatar.jpg" class="rounded-circle" width="40" height="40" alt=""> <span class="side-text">Abid Saleem</span> 
              </a>
         </li>
         <li>
             <a href="">
-                <img src="avatar.jpg" class="rounded-circle" width="40" height="40" alt=""> Abid Saleem
+                <img src="avatar.jpg" class="rounded-circle" width="40" height="40" alt=""> <span class="side-text">Abid Saleem</span> 
              </a>
         </li>
         <li>
             <a href="">
-                <img src="avatar.jpg" class="rounded-circle" width="40" height="40" alt=""> Abid Saleem
+                <img src="avatar.jpg" class="rounded-circle" width="40" height="40" alt=""> <span class="side-text">Abid Saleem</span> 
              </a>
         </li>
       </ul>
@@ -383,7 +382,7 @@
     });
 
     $(document).ready(function () {
-      $('#sidebar-right').on('click', function () {
+      $('#done').on('click', function () {
         $('#sidebar-right').toggleClass('active');
       });
     });
@@ -392,11 +391,30 @@
       if(document.getElementById('sidebar').className == 'active'){
         var classes = document.getElementsByClassName('text');
           for (let index = 0; index < classes.length; index++) {
-            classes[index].style.display = 'inline'
+            classes[index].style.display = 'inline';
+            classes[index].style.marginLeft = "20px";
           }
       }
       else {
         var classes = document.getElementsByClassName('text');
+          for (let index = 0; index < classes.length; index++) {
+            classes[index].style.display = 'none';
+            
+      }
+    }
+    }
+
+    function classAdd1(){
+      console.log(document.getElementById('sidebar-right').className == "d-none d-md-block");
+      if(document.getElementById('sidebar-right').className == "d-none d-md-block"){
+        var classes = document.getElementsByClassName('side-text');
+          for (let index = 0; index < classes.length; index++) {
+            classes[index].style.display = 'inline';
+            classes[index].style.marginLeft = "20px";
+          }
+      }
+      else {
+        var classes = document.getElementsByClassName('side-text');
           for (let index = 0; index < classes.length; index++) {
             classes[index].style.display = 'none'
       }
@@ -405,6 +423,14 @@
       
 
   </script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/6.2.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#reserved-urls -->
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
 </body>
 
 </html>
